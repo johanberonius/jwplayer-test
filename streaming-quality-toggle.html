@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+</head>
+<body>
+<h1>Quality toggle should work with multiple streaming sources using Caterpillar, Shaka or Flash-providers, like it does when using HTML5-provider.</h1>
+
+<p>Configuration reference:</p>
+<pre><a href="https://developer.jwplayer.com/jw-player/docs/developer-guide/customization/configuration-reference/#quality-toggle-for-video-files">https://developer.jwplayer.com/jw-player/docs/developer-guide/customization/configuration-reference/#quality-toggle-for-video-files</a></pre>
+
+<p>Sources:</p>
+<pre>Multiple sources using a streaming protocol (HLS or DASH) with different non-adaptive qualities.</pre>
+
+<p>Expected behavior</p>
+<pre>Both sources are available and the quality toggle is displayed, like it is when using HTML5-provider.</pre>
+
+<p>Actual behavior</p>
+<pre>Only the first source plays and quality toggle is not available when using Caterpillar, Shaka or Flash-providers.</pre>
+
+<p>Settings:</p>
+<pre>
+jwplayer('player').setup({
+    "title": "One playlist item with multiple quality sources using streaming",
+    "sources": [{
+           "file": "https://streaming4.ur.se/urse/_definst_/mp4:196000-196999/196679-9.mp4/playlist.m3u8",
+           "label": "SD"
+        },
+        {
+            "file": "https://streaming4.ur.se/urse/_definst_/mp4:196000-196999/196679-6.mp4/playlist.m3u8",
+            "label": "HD"
+        }
+    ]
+});
+</pre>
+
+<p>JW Player version</p>
+<pre>7.7.1 with Enterprise key</pre>
+
+<p>Stream server</p>
+<pre>Wowza Streaming Engine 4 Perpetual Edition 4.5.0.01 build18956</pre>
+
+
+<div id="player"></div>
+
+<script src="https://ssl.p.jwpcdn.com/player/v/7.7.1/jwplayer.js"></script>
+<script type="text/javascript">
+
+// JW Player 7 Enterprise key for 'Sveriges Utbildningsradio AB'
+jwplayer.key='l6kuLa50/+di7nHLC0MBpJhkGpg2zzOLiTFxDRRjQ0otJDtz';
+
+jwplayer('player').setup({
+    "title": "One playlist item with multiple quality sources using streaming",
+    "sources": [{
+            "file": "https://streaming4.ur.se/urse/_definst_/mp4:196000-196999/196679-9.mp4/playlist.m3u8",
+            "label": "SD"
+        },
+        {
+            "file": "https://streaming4.ur.se/urse/_definst_/mp4:196000-196999/196679-6.mp4/playlist.m3u8",
+            "label": "HD"
+        }
+    ]
+});
+</script>
+</body>
