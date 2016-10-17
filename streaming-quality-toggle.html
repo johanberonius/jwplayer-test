@@ -9,7 +9,7 @@
 <pre><a href="https://developer.jwplayer.com/jw-player/docs/developer-guide/customization/configuration-reference/#quality-toggle-for-video-files">https://developer.jwplayer.com/jw-player/docs/developer-guide/customization/configuration-reference/#quality-toggle-for-video-files</a></pre>
 
 <p>Sources:</p>
-<pre>Multiple sources using a streaming protocol (HLS or DASH) with different non-adaptive qualities.</pre>
+<pre>Multiple sources of the same type using a streaming protocol (HLS or DASH) with different non-adaptive qualities.</pre>
 
 <p>Expected behavior</p>
 <pre>Both sources are available and the quality toggle is displayed, like it is when using HTML5-provider.</pre>
@@ -21,6 +21,7 @@
 <pre>
 jwplayer('player').setup({
     "title": "One playlist item with multiple quality sources using streaming",
+    "hlshtml": true,
     "sources": [{
            "file": "https://streaming4.ur.se/urse/_definst_/mp4:196000-196999/196679-9.mp4/playlist.m3u8",
            "label": "SD"
@@ -50,6 +51,7 @@ jwplayer.key='l6kuLa50/+di7nHLC0MBpJhkGpg2zzOLiTFxDRRjQ0otJDtz';
 
 jwplayer('player').setup({
     "title": "One playlist item with multiple quality sources using streaming",
+    "hlshtml": true,
     "sources": [{
             "file": "https://streaming4.ur.se/urse/_definst_/mp4:196000-196999/196679-9.mp4/playlist.m3u8",
             "label": "SD"
