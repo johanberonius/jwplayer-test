@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<title>Test for mp3 audio source with JW Player 7.8.0-beta.4 using HLS JS Caterpillar provider</title>
+</head>
+<body>
+<h1>Test for mp3 audio source with JW Player 7.8.0-beta.4 using HLS JS Caterpillar provider</h1>
+
+<p>Source:</p>
+<pre>HLS stream with MP3 audio</pre>
+
+<p>Actual behavior</p>
+<pre>"Hlsjs shutdown Media Error: no level with compatible codecs found in manifest" in provider.hlsjs.js</pre>
+
+<p>Expected behavior</p>
+<pre>Audio stream should play just like it does using the Flash provider.</pre>
+
+<p>Steps to reproduce</p>
+<pre>Press play.</pre>
+
+<p>JW Player version</p>
+<pre>7.8.0-beta.4 with Enterprise key</pre>
+
+<p>Stream server</p>
+<pre>Wowza Streaming Engine 4 Perpetual Edition 4.5.0.01 build18956</pre>
+
+<p>Environment</p>
+<pre>Browsers without native support for HLS but with support for MSE, eg. Firefox 49 or Chrome 53.</pre>
+
+<p>GitHub Issue</p>
+<pre><a href="https://github.com/jwplayer/jwplayer/issues/1484">https://github.com/jwplayer/jwplayer/issues/1484</a></pre>
+
+<div id="player"></div>
+
+<script src="https://ssl.p.jwpcdn.com/player/v/7.8.0-beta.4/jwplayer.js"></script>
+<script type="text/javascript">
+
+// JW Player 7 Enterprise key for 'Sveriges Utbildningsradio AB'
+jwplayer.key='l6kuLa50/+di7nHLC0MBpJhkGpg2zzOLiTFxDRRjQ0otJDtz';
+
+jwplayer('player').setup({ file: 'https://streaming4.ur.se/urse/_definst_/mp3:196000-196999/196066-4.mp3/playlist.m3u8' });
+
+</script>
+</body>
