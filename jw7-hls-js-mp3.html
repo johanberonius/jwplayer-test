@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <head>
-<title>Test for mp3 audio source with JW Player 7.8.1 using HLS JS provider</title>
+<title>Test for mp3 audio source with JW Player 7.8.3 using HLS JS provider</title>
 </head>
 <body>
-<h1>Test for mp3 audio source with JW Player 7.8.1 using HLS JS provider</h1>
+<h1>Test for mp3 audio source with JW Player 7.8.3 using HLS JS provider</h1>
 
 <p>Source:</p>
 <pre>HLS stream with MP3 audio</pre>
 
 <p>Actual behavior</p>
-<pre>"Hlsjs shutdown Media Error: no level with compatible codecs found in manifest" in provider.hlsjs.js</pre>
+<pre>Playbacks freezes about every ten seconds in Firefox.<br>
+No timeline is visible in Chrome, it says "Live broadcast" even though it's not.</pre>
 
 <p>Expected behavior</p>
 <pre>Audio stream should play just like it does using the Flash provider.</pre>
@@ -18,7 +19,7 @@
 <pre>Press play.</pre>
 
 <p>JW Player version</p>
-<pre>7.8.1 with Enterprise key</pre>
+<pre>7.8.3 with Enterprise key</pre>
 
 <p>Stream server</p>
 <pre>Wowza Streaming Engine 4 Perpetual Edition 4.5.0.01 build18956</pre>
@@ -31,7 +32,7 @@
 
 <div id="player"></div>
 
-<script src="https://ssl.p.jwpcdn.com/player/v/7.8.1/jwplayer.js"></script>
+<script src="https://ssl.p.jwpcdn.com/player/v/7.8.3/jwplayer.js"></script>
 <script type="text/javascript">
 
 // JW Player 7 Enterprise key for 'Sveriges Utbildningsradio AB'
